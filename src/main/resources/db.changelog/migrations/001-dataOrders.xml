@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.3.xsd">
+<changeSet author="testdd" id="1">
+    <insert schemaName="netology" tableName="orders">
+        <column name="product_name" value="Еда"/>
+        <column name="amount" value="123"/>
+        <column name="customer_id" value="1"/>
+    </insert>
+    <insert schemaName="netology" tableName="orders">
+        <column name="product_name" value="Обувь"/>
+        <column name="amount" value="26"/>
+        <column name="customer_id" value="2"/>
+    </insert>
+    <insert schemaName="netology" tableName="orders">
+        <column name="product_name" value="Оджеда"/>
+        <column name="amount" value="29"/>
+        <column name="customer_id" value="3"/>
+    </insert>
+    <insert schemaName="netology" tableName="orders">
+        <column name="product_name" value="Электроника"/>
+        <column name="amount" value="44"/>
+        <column name="customer_id" value="4"/>
+    </insert>
+    <insert schemaName="netology" tableName="orders">
+        <column name="product_name" value="Бытовая химия"/>
+        <column name="amount" value="33"/>
+        <column name="customer_id" value="5"/>
+    </insert>
+</changeSet>
+</databaseChangeLog>

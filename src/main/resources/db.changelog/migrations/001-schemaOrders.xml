@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.3.xsd">
+
+    <changeSet  author="testdd"  id="1">
+        <createTable schemaName="netology" tableName="ORDERS">
+            <column  name="id"  type="INTEGER" autoIncrement="true">
+                <constraints  nullable="false" primaryKey="true"  unique="true"/>
+            </column>
+            <column  name="date"  type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column  name="customer_id"  type="INTEGER">
+                <constraints  nullable="false"
+                              foreignKeyName="fk_orders_customers"
+                              references="netology.CUSTOMERS(id)"/>
+            </column>
+            <column  name="product_name"  type="VARCHAR(255)">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="amount"  type="INTEGER" />
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
