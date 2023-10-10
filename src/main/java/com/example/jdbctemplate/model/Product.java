@@ -6,14 +6,14 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class Product {
-    private final String product_name;
+    private final String productName;
 
 
 
     @Override
     public String toString() {
         return "Product{" +
-                "product_name='" + product_name + '\'' +
+                "product_name='" + productName + '\'' +
                 '}';
     }
 }

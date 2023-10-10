@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
 
-    ProductRepository productRepository;
+   private final ProductRepository productRepository;
 
     public Controller(ProductRepository productRepository) {
         this.productRepository = productRepository;
